@@ -8,8 +8,6 @@ const collectionName = "bookstore-api";
 const username = unescape(process.env.ADMIN_USERNAME);
 const password = encodeURIComponent(process.env.ADMIN_PASSWORD);
 
-// const Book = require("./models/book.js");
-
 const bookRoutes = require("./routes/bookRoutes");
 
 const port = process.env.PORT || 3000;
