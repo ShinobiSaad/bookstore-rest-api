@@ -11,7 +11,6 @@ This is a RESTful API for an online bookstore built using Node.js and Express.js
 - Authentication using JWT
 - Documentation using Swagger
 - Docker support for easy deployment
-- Unit and integration tests using Jest
 
 ## Installation
 
@@ -56,14 +55,6 @@ This is a RESTful API for an online bookstore built using Node.js and Express.js
 ## API Documentation
 
 You can access the API documentation using Swagger UI at `http://localhost:3000/api-docs`.
-
-## Testing
-
-To run tests, use the following command:
-
-```bash
-npm test
-```
 
 ## Deployment
 
