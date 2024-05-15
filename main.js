@@ -9,6 +9,8 @@ const username = unescape(process.env.ADMIN_USERNAME);
 const password = encodeURIComponent(process.env.ADMIN_PASSWORD);
 
 const bookRoutes = require("./routes/bookRoutes");
+const cartRoutes = require("./routes/cartRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 const port = process.env.PORT || 3000;
 
@@ -16,6 +18,8 @@ app.use(express.json()); // JSON middleware
 
 // Routes
 app.use("/book", bookRoutes);
+app.use("/cart", cartRoutes);
+app.use("/order", orderRoutes);
 
 app.get("/", (req, res) => {
   res.send("APP RUNNING");
