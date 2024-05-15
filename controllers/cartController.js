@@ -1,5 +1,6 @@
 const cartService = require("../services/cartService");
 
+// Adding data cart model
 exports.addToCart = async (req, res) => {
   try {
     const { userId, bookId, quantity } = req.body;
@@ -11,6 +12,7 @@ exports.addToCart = async (req, res) => {
   }
 };
 
+// Getting data for cart
 exports.getCart = async (req, res) => {
   try {
     const userId = req.user._id;
@@ -22,6 +24,7 @@ exports.getCart = async (req, res) => {
   }
 };
 
+// Removing data of cart
 exports.removeFromCart = async (req, res) => {
   try {
     const { userId } = req.params;

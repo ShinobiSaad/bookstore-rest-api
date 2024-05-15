@@ -1,5 +1,6 @@
 const orderService = require("../services/orderService");
 
+// Adding data of Order
 exports.placeOrder = async (req, res) => {
   try {
     const { userId, items, totalPrice } = req.body;
@@ -11,6 +12,7 @@ exports.placeOrder = async (req, res) => {
   }
 };
 
+// Getting data of history of orders
 exports.getOrderHistory = async (req, res) => {
   try {
     const userId = req.user._id;
