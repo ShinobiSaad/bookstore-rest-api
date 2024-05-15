@@ -12,6 +12,9 @@ const password = encodeURIComponent(process.env.ADMIN_PASSWORD);
 const bookRoutes = require("./routes/bookRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const authRoutes = require("./routes/authRoutes");
+const userRoutes = require("./routes/userRoutes");
+const authenticateJWT = require("./middleware/authMiddleware");
 
 // Importing Documentation
 const docs = require("./Docs/swaggerSetup");
@@ -24,6 +27,8 @@ app.use(express.json()); // JSON middleware
 app.use("/book", bookRoutes);
 app.use("/cart", cartRoutes);
 app.use("/order", orderRoutes);
+app.use("/auth", authRoutes);
+app.use("/user", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("APP RUNNING");
