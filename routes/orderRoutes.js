@@ -52,5 +52,3 @@ module.exports = router;
  *       '500':
  *         description: Internal server error
  */
-
-// Add JSDoc comments for other order routes as needed...

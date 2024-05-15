@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:14
 
 WORKDIR /app
 
@@ -12,4 +12,4 @@ ENV PORT = 3000
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "serve" ]
